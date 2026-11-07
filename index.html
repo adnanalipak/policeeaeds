@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Police Traffic Fine Check: A Complete Guide to Checking and Managing Traffic Penalties</title>
+<meta name="description" content="Learn how a police traffic fine check works, what details you need, how to read a challan, pay safely, dispute mistakes and avoid fake fine messages.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0E2238;
+  --ink-2:#17324F;
+  --amber:#FFB81C;
+  --amber-d:#E39A00;
+  --teal:#0F8B8D;
+  --teal-l:#E3F4F4;
+  --paper:#F5F7FA;
+  --card:#FFFFFF;
+  --text:#233446;
+  --muted:#5D6F82;
+  --line:#DDE4EC;
+  --danger:#C8402B;
+  --head:'Bricolage Grotesque','Segoe UI',Arial,sans-serif;
+  --body:'Source Sans 3','Segoe UI',Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{font-family:var(--body);font-size:18px;line-height:1.7;color:var(--text);background:var(--paper);-webkit-font-smoothing:antialiased}
+a{color:var(--teal);font-weight:600;text-decoration-thickness:2px;text-underline-offset:3px}
+a:hover{color:var(--ink)}
+:focus-visible{outline:3px solid var(--amber);outline-offset:3px;border-radius:4px}
+.wrap{width:100%;max-width:1240px;margin:0 auto;padding:0 32px}
+
+/* HEADER - one line */
+header{position:sticky;top:0;z-index:50;background:var(--ink);border-bottom:3px solid var(--amber)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:24px;height:68px;white-space:nowrap}
+.brand{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none;font-family:var(--head);font-weight:800;font-size:21px;letter-spacing:-.2px}
+.brand:hover{color:#fff}
+.brand-mark{width:34px;height:34px;border-radius:9px;background:var(--amber);display:grid;place-items:center}
+.brand-mark svg{width:20px;height:20px}
+nav{display:flex;align-items:center;gap:6px}
+nav a{color:#CFDCEA;text-decoration:none;font-weight:600;font-size:15.5px;padding:8px 14px;border-radius:8px}
+nav a:hover{background:var(--ink-2);color:#fff}
+.btn{display:inline-block;background:var(--amber);color:var(--ink);font-weight:700;text-decoration:none;padding:12px 24px;border-radius:10px;font-size:16px;transition:background .2s}
+.btn:hover{background:#fff;color:var(--ink)}
+.bar .btn{padding:9px 20px;font-size:15px}
+
+/* HERO */
+.hero{background:var(--ink);color:#fff;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:10px;background:repeating-linear-gradient(90deg,var(--amber) 0 56px,transparent 56px 96px)}
+.hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:56px;align-items:center;padding:84px 0 96px}
+.hero h1{font-family:var(--head);font-weight:800;font-size:clamp(34px,4.6vw,58px);line-height:1.08;letter-spacing:-1px;margin-bottom:26px}
+.hero p{color:#D3DFEC;font-size:19.5px;max-width:720px;margin-bottom:18px}
+.hero p a{color:var(--amber);text-decoration-color:var(--amber)}
+.hero p a:hover{color:#fff}
+.hero .btn{margin-top:14px}
+
+.ticket{background:#fff;color:var(--text);border-radius:16px;box-shadow:0 30px 60px rgba(0,0,0,.35);transform:rotate(2deg);position:relative}
+.ticket-top{background:var(--amber);color:var(--ink);padding:16px 22px;border-radius:16px 16px 0 0;font-family:var(--head);font-weight:800;font-size:19px;display:flex;justify-content:space-between}
+.ticket-body{padding:8px 22px 6px}
+.row{display:flex;justify-content:space-between;gap:14px;padding:12px 0;border-bottom:1px dashed var(--line);font-size:16px}
+.row span:first-child{color:var(--muted)}
+.row span:last-child{font-weight:700;text-align:right}
+.stub{padding:16px 22px 20px;display:flex;align-items:center;justify-content:space-between;border-top:2px dashed var(--line);margin-top:6px}
+.stub b{font-family:var(--head);font-size:22px}
+.badge{background:#FDEBE7;color:var(--danger);font-weight:700;font-size:14px;padding:5px 12px;border-radius:99px}
+
+/* LAYOUT */
+.layout{display:grid;grid-template-columns:270px 1fr;gap:56px;padding:64px 0 40px;align-items:start}
+.toc{position:sticky;top:92px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px}
+.toc h2{font-family:var(--head);font-size:18px;margin-bottom:12px;color:var(--ink)}
+.toc a{display:block;font-size:15.5px;font-weight:500;color:var(--muted);text-decoration:none;padding:7px 0 7px 12px;border-left:3px solid var(--line)}
+.toc a:hover{color:var(--ink);border-left-color:var(--amber)}
+article section{margin-bottom:56px}
+article h2{font-family:var(--head);font-weight:800;color:var(--ink);font-size:clamp(26px,3vw,36px);line-height:1.18;letter-spacing:-.5px;margin-bottom:18px;padding-left:18px;border-left:6px solid var(--amber)}
+article h3{font-family:var(--head);font-weight:700;color:var(--ink);font-size:20px;margin-bottom:6px}
+article p{margin-bottom:16px;max-width:78ch}
+.lead-note{background:var(--teal-l);border-left:5px solid var(--teal);border-radius:0 12px 12px 0;padding:18px 22px;margin:22px 0;max-width:78ch}
+
+.checks{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:18px 0 22px}
+.checks li{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px 14px 46px;position:relative;font-weight:500}
+.checks li::before{content:"";position:absolute;left:16px;top:50%;width:16px;height:16px;margin-top:-8px;border-radius:50%;background:var(--teal);box-shadow:inset 0 0 0 4px var(--teal-l)}
+.checks.plain{grid-template-columns:1fr}
+
+.steps{display:grid;gap:16px;margin:22px 0}
+.step{display:grid;grid-template-columns:54px 1fr;gap:18px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 22px}
+.step .n{width:54px;height:54px;border-radius:14px;background:var(--ink);color:var(--amber);font-family:var(--head);font-weight:800;font-size:24px;display:grid;place-items:center}
+.step p{margin:0;font-size:17px}
+.step ul{margin:10px 0 0 20px;font-size:17px}
+
+.official{background:var(--ink);color:#D3DFEC;border-radius:16px;padding:26px 28px;margin:22px 0}
+.official h3{color:var(--amber);margin-bottom:10px}
+.official ul{margin-left:20px}
+.official li{padding:3px 0}
+
+.table-scroll{overflow-x:auto;border-radius:14px;border:1px solid var(--line);background:var(--card);margin:22px 0}
+table{width:100%;border-collapse:collapse;min-width:620px;font-size:16.5px}
+th{background:var(--ink);color:#fff;text-align:left;font-family:var(--head);padding:14px 18px}
+td{padding:13px 18px;border-top:1px solid var(--line)}
+tr:nth-child(even) td{background:#F8FAFC}
+td:first-child{font-weight:700;color:var(--ink)}
+
+.benefits{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin:22px 0}
+.benefit{background:var(--card);border:1px solid var(--line);border-top:5px solid var(--amber);border-radius:14px;padding:20px}
+.benefit h3{font-size:18px}
+.benefit p{font-size:16.5px;margin:0}
+
+.warn{background:#FFF6E0;border:1px solid #F3D58A;border-radius:14px;padding:22px 24px;margin:20px 0}
+.warn h3{color:#8A5A00}
+
+/* FAQ */
+.faq{background:var(--card);border-top:1px solid var(--line);padding:72px 0}
+.faq h2{font-family:var(--head);font-weight:800;color:var(--ink);font-size:clamp(28px,3.2vw,40px);letter-spacing:-.5px;margin-bottom:28px;padding-left:18px;border-left:6px solid var(--amber)}
+.faq-list{display:grid;grid-template-columns:1fr 1fr;gap:14px 28px;align-items:start}
+details{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:0}
+summary{cursor:pointer;list-style:none;padding:18px 54px 18px 20px;font-weight:700;color:var(--ink);position:relative;font-size:17px;line-height:1.45}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:18px;top:50%;transform:translateY(-50%);width:26px;height:26px;border-radius:50%;background:var(--ink);color:var(--amber);display:grid;place-items:center;font-size:20px;line-height:1}
+details[open] summary::after{content:"\2212";background:var(--amber);color:var(--ink)}
+details[open]{background:#fff;border-color:var(--amber)}
+details p{padding:0 20px 18px;font-size:16.5px;margin:0}
+
+/* CONCLUSION BAND */
+.cta-band{background:linear-gradient(120deg,var(--teal),#0B6E78);color:#fff;padding:64px 0}
+.cta-band .wrap{display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap}
+.cta-band h2{font-family:var(--head);font-size:clamp(26px,3vw,36px);max-width:720px;line-height:1.2}
+
+/* FOOTER */
+footer{background:var(--ink);color:#B7C7D8;padding:56px 0 0}
+.foot{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;padding-bottom:40px}
+footer h3{color:#fff;font-family:var(--head);font-size:18px;margin-bottom:14px}
+footer p{font-size:16px;max-width:42ch}
+footer ul{list-style:none}
+footer li{padding:4px 0}
+footer a{color:#B7C7D8;text-decoration:none;font-weight:500}
+footer a:hover{color:var(--amber)}
+.social{display:flex;gap:12px;margin-top:6px;flex-wrap:wrap}
+.social a{width:44px;height:44px;border-radius:12px;background:var(--ink-2);display:grid;place-items:center;transition:background .2s}
+.social a:hover{background:var(--amber)}
+.social a:hover svg{fill:var(--ink)}
+.social svg{width:20px;height:20px;fill:#fff}
+.copy{border-top:1px solid var(--ink-2);padding:20px 0;font-size:14.5px;text-align:center;color:#8EA2B7}
+
+@media (max-width:1020px){
+  .hero-grid{grid-template-columns:1fr;padding:60px 0 72px}
+  .ticket{max-width:420px;transform:none}
+  .layout{grid-template-columns:1fr;gap:28px}
+  .toc{position:static}
+  .faq-list{grid-template-columns:1fr}
+  .foot{grid-template-columns:1fr 1fr}
+  nav a:not(.btn){display:none}
+}
+@media (max-width:640px){
+  body{font-size:17px}
+  .wrap{padding:0 18px}
+  .checks{grid-template-columns:1fr}
+  .step{grid-template-columns:1fr}
+  .foot{grid-template-columns:1fr}
+  .brand span{font-size:18px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="#top" aria-label="Traffic Fine Guide home">
+      <div class="brand-mark"><svg viewBox="0 0 24 24" fill="#0E2238" aria-hidden="true"><path d="M12 2 3 6v6c0 5 3.8 9.3 9 10 5.2-.7 9-5 9-10V6l-9-4Zm-1.2 14.2-3.5-3.5 1.4-1.4 2.1 2.1 4.6-4.6 1.4 1.4-6 6Z"/></svg></div>
+      <span>Traffic Fine Guide</span>
+    </a>
+    <nav aria-label="Main">
+      <a href="#what-is">Overview</a>
+      <a href="#how-to-check">How to Check</a>
+      <a href="#pakistan">Pakistan</a>
+      <a href="#payment">Payment</a>
+      <a href="#faqs">FAQs</a>
+      <a class="btn" href="#how-to-check">Check Guide</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <h1>Police Traffic Fine Check: A Complete Guide to Checking and Managing Traffic Penalties</h1>
+      <p>Following traffic regulations is an important responsibility for every driver. Whether someone rides a motorcycle, drives a private car, or operates a commercial vehicle, understanding road rules helps prevent accidents and unnecessary legal problems. However, even careful drivers may sometimes receive traffic penalties because of parking mistakes, signal violations, speeding, or missing vehicle documents.</p>
+      <p>A <a href="https://tmschecktz.org/">Police Traffic Fine Check</a> allows motorists to find out whether a traffic penalty has been recorded against their vehicle or driving record. With the development of digital policing services, checking traffic fines has become more convenient in many areas. Instead of relying entirely on paper tickets or visiting a traffic office, drivers may be able to access online verification services.</p>
+      <p>This guide explains how traffic fine checking works, what information drivers may need, how to understand a penalty notice, and what steps to take after discovering an outstanding fine. It also covers payment precautions, disputed tickets, and practical ways to avoid future violations.</p>
+      <a class="btn" href="#how-to-check">Start with the steps</a>
+    </div>
+    <aside class="ticket" aria-label="Example of a traffic penalty notice">
+      <div class="ticket-top"><span>Traffic Challan</span><span>Sample</span></div>
+      <div class="ticket-body">
+        <div class="row"><span>Vehicle</span><span>Registration No.</span></div>
+        <div class="row"><span>Violation</span><span>Description</span></div>
+        <div class="row"><span>Date &amp; time</span><span>Issue date</span></div>
+        <div class="row"><span>Location</span><span>Where recorded</span></div>
+        <div class="row"><span>Amount payable</span><span>Fine amount</span></div>
+      </div>
+      <div class="stub"><b>Verify first</b><span class="badge">Check status</span></div>
+    </aside>
+  </div>
+</section>
+
+<!-- BODY -->
+<main class="wrap layout">
+  <aside class="toc" aria-label="Table of contents">
+    <h2>In this guide</h2>
+    <a href="#what-is">What Is a Fine Check?</a>
+    <a href="#monitoring">How Monitoring Works</a>
+    <a href="#how-to-check">Checking Fines Online</a>
+    <a href="#pakistan">Fine Check in Pakistan</a>
+    <a href="#reasons">Common Reasons for Fines</a>
+    <a href="#challan">What to Check on a Challan</a>
+    <a href="#payment">Paying a Fine</a>
+    <a href="#incorrect">Incorrect Fines</a>
+    <a href="#benefits">Benefits</a>
+    <a href="#fake">Avoiding Fake Messages</a>
+    <a href="#tips">Practical Tips</a>
+    <a href="#conclusion">Conclusion</a>
+    <a href="#faqs">FAQs</a>
+  </aside>
+
+  <article>
+    <section id="what-is">
+      <h2>What Is a Police Traffic Fine Check?</h2>
+      <p>A Police Traffic Fine Check is a process that helps vehicle owners and drivers identify penalties issued for breaking traffic regulations. Depending on the local traffic authority, a fine may be issued by an officer during a roadside inspection or generated through an electronic monitoring system.</p>
+      <p>A traffic penalty notice generally contains information about the violation, the vehicle, the date, and the amount payable. Some digital systems also provide photographs or other evidence connected with the reported incident.</p>
+      <p>Checking a fine record is important because drivers may not always receive a notice immediately. An electronic ticket might be issued after a camera records a violation, while a paper challan may be handed directly to the driver.</p>
+      <div class="lead-note">The exact checking procedure depends on the country, province, city, and responsible traffic department.</div>
+    </section>
+
+    <section id="monitoring">
+      <h2>How Modern Traffic Fine Monitoring Works</h2>
+      <p>Traffic enforcement has changed considerably with the introduction of digital technology. Many authorities now combine roadside inspections with electronic systems to identify violations and maintain records.</p>
+      <p>One common method is automatic number plate recognition. Cameras capture vehicle registration details and compare them with information in the relevant traffic database. If the system identifies a possible violation, the incident may be reviewed and processed according to local rules.</p>
+      <p>Other enforcement methods include:</p>
+      <ul class="checks plain">
+        <li>Traffic officers issuing tickets during roadside inspections.</li>
+        <li>Cameras recording vehicles crossing red lights.</li>
+        <li>Speed-monitoring equipment identifying vehicles exceeding permitted limits.</li>
+        <li>Digital systems recording illegal parking and restricted-lane use.</li>
+        <li>Electronic databases storing issued and paid traffic penalties.</li>
+      </ul>
+      <p>These systems can make enforcement more organized, but drivers should always consult the relevant authority to verify an individual ticket.</p>
+    </section>
+
+    <section id="how-to-check">
+      <h2>How to Check Police Traffic Fines Online</h2>
+      <p>Online verification is often one of the most convenient ways to review traffic penalties. Although different authorities use different websites and applications, the general process is similar. Many drivers begin with an <a href="https://tmschecktz.org/REPLACE-SECOND-LINK/">online traffic fine verification</a> service to understand which details are needed before they search an official record.</p>
+      <div class="steps">
+        <div class="step"><div class="n">1</div><div><h3>Find the Correct Official Website</h3><p>Start by identifying the traffic police department responsible for the location where the alleged violation occurred. Do not assume that one country's or province's portal will display every traffic fine.</p></div></div>
+        <div class="step"><div class="n">2</div><div><h3>Open the Verification Service</h3><p>Look for a section named E-Challan, Traffic Fine Verification, Challan Check, or Traffic Services. Read the instructions before entering personal or vehicle information.</p></div></div>
+        <div class="step"><div class="n">3</div><div><h3>Enter the Required Information</h3><p>Depending on the system, you may need one or more of the following:</p>
+          <ul><li>Vehicle registration number.</li><li>Driving licence number.</li><li>National identity or identification number.</li><li>Challan or ticket reference number.</li><li>Registered vehicle owner's details.</li></ul></div></div>
+        <div class="step"><div class="n">4</div><div><h3>Submit the Search</h3><p>Enter the requested information carefully. Some websites may also require a security code or verification image before displaying the results.</p></div></div>
+        <div class="step"><div class="n">5</div><div><h3>Review the Fine Details</h3><p>If a record is available, examine the violation description, issue date, penalty amount, payment status, and any available evidence.</p></div></div>
+        <div class="step"><div class="n">6</div><div><h3>Save the Reference Information</h3><p>Keep a copy of the ticket number, payment reference, and receipt. These details can help if you need to contact the traffic authority or resolve a payment issue.</p></div></div>
+      </div>
+    </section>
+
+    <section id="pakistan">
+      <h2>Police Traffic Fine Check in Pakistan</h2>
+      <p>Pakistan has different traffic enforcement arrangements across its provinces and federal territory. Drivers should use the official service associated with the area where their vehicle received a ticket.</p>
+      <p>In Punjab, traffic authorities provide digital challan services, while Islamabad Capital Territory Police also provides an online e-challan verification facility. Punjab's e-Pay system lists traffic challans among its government payment services.</p>
+      <p>For example, the official Punjab Traffic Police guidance describes payment using a PSID generated for a traffic violation ticket. Its published procedure also explains that unpaid tickets and seized documents may be referred for further proceedings after the specified period.</p>
+      <p>Islamabad Police lists E-Challan Verification among its online public services. These services are useful examples of how digital traffic enforcement is developing in Pakistan.</p>
+      <div class="official">
+        <h3>Official resources include:</h3>
+        <ul>
+          <li>Punjab Traffic Police digital challan and ticket guidance</li>
+          <li>Islamabad Capital Police E-Challan Verification</li>
+          <li>ePay Punjab government payment platform</li>
+        </ul>
+      </div>
+      <p>Always check the current instructions on the relevant official website because verification requirements and payment procedures can differ by location.</p>
+    </section>
+
+    <section id="reasons">
+      <h2>Common Reasons Drivers Receive Traffic Fines</h2>
+      <p>Traffic penalties are generally issued when drivers fail to follow applicable road regulations. The exact offences and penalties depend on local laws.</p>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>Traffic Violation</th><th>Why It May Result in a Fine</th><th>Responsible Driving Practice</th></tr></thead>
+          <tbody>
+            <tr><td>Red-light violation</td><td>Crossing a signal when prohibited</td><td>Stop before the marked line</td></tr>
+            <tr><td>Speeding</td><td>Exceeding the permitted speed</td><td>Follow posted speed limits</td></tr>
+            <tr><td>No helmet</td><td>Riding without required head protection</td><td>Wear an approved helmet</td></tr>
+            <tr><td>No seat belt</td><td>Failing to use required restraints</td><td>Fasten seat belts before moving</td></tr>
+            <tr><td>Illegal parking</td><td>Blocking restricted or prohibited areas</td><td>Use authorized parking spaces</td></tr>
+            <tr><td>Wrong-way driving</td><td>Entering a road against its direction</td><td>Follow road signs and markings</td></tr>
+            <tr><td>Mobile phone use</td><td>Distracted driving where prohibited</td><td>Keep attention on the road</td></tr>
+            <tr><td>Missing documents</td><td>Failing to produce required documents</td><td>Keep valid documents available</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Understanding these common violations can help motorists avoid repeated penalties and improve road safety.</p>
+    </section>
+
+    <section id="challan">
+      <h2>What Information Should You Check on a Traffic Challan?</h2>
+      <p>Receiving a fine does not mean you should immediately ignore or pay it without reviewing the details. First, confirm that the notice belongs to your vehicle and relates to the correct incident.</p>
+      <p>Check the vehicle registration number, date and time, location, violation description, and fine amount. If the notice includes an image, examine whether the vehicle and registration plate appear to match your records.</p>
+      <p>You should also review the payment deadline and instructions for submitting an objection. If any information appears incorrect, contact the responsible traffic authority through its official complaint or inquiry channel.</p>
+      <p>A careful review can help identify duplicate records, incorrect registration details, or possible administrative mistakes.</p>
+    </section>
+
+    <section id="payment">
+      <h2>How to Pay an Outstanding Traffic Fine</h2>
+      <p>Once a traffic penalty has been verified, the next step is to follow the payment procedure provided by the issuing authority.</p>
+      <p>Some jurisdictions allow payment through mobile banking, government payment applications, online wallets, bank branches, or authorized payment counters. Others may require payment through a specific government portal.</p>
+      <p>In Punjab, the official traffic ticket guidance explains that a PSID can be used for payment through supported mobile banking or online wallet services. The ePay Punjab platform also lists traffic challans as a government payment category.</p>
+      <p>A responsible payment process should include the following actions:</p>
+      <ul class="checks">
+        <li>Confirm that the fine is genuine through the official authority.</li>
+        <li>Check the amount and payment reference.</li>
+        <li>Select an authorized payment channel.</li>
+        <li>Enter the reference details accurately.</li>
+        <li>Complete the transaction.</li>
+        <li>Save the digital or printed receipt.</li>
+        <li>Recheck the challan status when the system allows it.</li>
+      </ul>
+      <div class="lead-note">Do not assume that a payment has been recorded simply because money has left your account. Keep the transaction receipt until the traffic authority confirms settlement.</div>
+    </section>
+
+    <section id="incorrect">
+      <h2>What to Do If You Receive an Incorrect Traffic Fine</h2>
+      <p>Sometimes drivers may believe that a traffic ticket was issued incorrectly. For example, the vehicle registration number may have been entered incorrectly, the vehicle may have been sold before the incident, or the evidence may not clearly show the reported violation.</p>
+      <p>If you believe a penalty is incorrect, do not ignore the notice. Review the issuing authority's procedure for objections, appeals, or complaints.</p>
+      <p>Prepare relevant information such as the ticket number, vehicle registration documents, ownership details, and any supporting evidence. Submit the complaint through the officially designated channel and retain its reference number.</p>
+      <p>Avoid relying on unofficial individuals who promise to cancel fines in exchange for money. Only the competent authority can review and decide a formal challenge.</p>
+    </section>
+
+    <section id="benefits">
+      <h2>Benefits of Regular Traffic Fine Verification</h2>
+      <p>Checking traffic records occasionally can help vehicle owners maintain better control over their responsibilities.</p>
+      <div class="benefits">
+        <div class="benefit"><h3>Better awareness</h3><p>Drivers can discover recorded violations and understand which rules need more attention.</p></div>
+        <div class="benefit"><h3>Fewer administrative surprises</h3><p>Reviewing outstanding penalties can help prevent unexpected problems when dealing with vehicle-related services.</p></div>
+        <div class="benefit"><h3>Improved record keeping</h3><p>Digital receipts and challan references make it easier to organize payment information.</p></div>
+        <div class="benefit"><h3>Greater convenience</h3><p>Online services can reduce unnecessary visits to traffic offices where digital verification and payment are available.</p></div>
+        <div class="benefit"><h3>Safer driving habits</h3><p>Understanding previous violations may encourage drivers to improve their road behaviour.</p></div>
+      </div>
+    </section>
+
+    <section id="fake">
+      <h2>How to Avoid Fake Traffic Fine Messages and Websites</h2>
+      <div class="warn">
+        <h3>Scam alert</h3>
+        <p>As digital payment services become more common, motorists should be careful about fraudulent messages and websites. A suspicious message may claim that a fine must be paid immediately and include a link to an unofficial payment page.</p>
+        <p style="margin:0">Never enter banking passwords, one-time verification codes, or card security details into a page reached through an unexpected message.</p>
+      </div>
+      <p>Instead, open the official traffic police website independently and check whether a genuine record exists. Confirm the website address, use authorized payment channels, and contact the department if a message appears suspicious.</p>
+      <p>Remember that a professional-looking logo or official-sounding message does not automatically prove that a payment request is genuine.</p>
+    </section>
+
+    <section id="tips">
+      <h2>Practical Tips for Keeping Your Traffic Record Clear</h2>
+      <p>Maintaining a responsible driving routine is more effective than repeatedly dealing with penalties. Drivers should keep their registration and licence information valid, follow speed limits, obey road signs, and avoid using mobile phones while driving.</p>
+      <p>Motorcyclists should wear appropriate helmets, while car occupants should use seat belts. Parking rules should also be followed, particularly near intersections, pedestrian crossings, and emergency access points.</p>
+      <p>Vehicle owners should periodically review official notices and keep records of payments and ownership changes. These simple habits can reduce misunderstandings and help motorists stay informed.</p>
+    </section>
+
+    <section id="conclusion">
+      <h2>Conclusion</h2>
+      <p>Police Traffic Fine Check services help drivers understand their traffic records, identify outstanding penalties, and follow the correct payment or complaint procedure. As digital enforcement expands, online verification is becoming an important part of responsible vehicle ownership.</p>
+      <p>However, checking a fine is only one part of road safety. Drivers must also understand traffic regulations, maintain valid documents, and follow safe driving practices. Whenever a penalty appears, verify its details through the relevant official authority before making a payment.</p>
+      <p>By checking records carefully, keeping payment receipts, avoiding suspicious links, and respecting road rules, motorists can manage traffic penalties more confidently and contribute to safer roads for everyone.</p>
+    </section>
+  </article>
+</main>
+
+<!-- FAQ -->
+<section class="faq" id="faqs">
+  <div class="wrap">
+    <h2>Frequently Asked Questions (FAQs)</h2>
+    <div class="faq-list">
+      <details><summary>1. What is a Police Traffic Fine Check?</summary><p>It is a process that allows drivers or vehicle owners to find traffic penalties recorded by the relevant police or traffic authority.</p></details>
+      <details><summary>2. Can I check my traffic fine online?</summary><p>Yes, many traffic authorities provide online challan verification services. Availability depends on the country and local jurisdiction.</p></details>
+      <details><summary>3. What details are required to check a traffic fine?</summary><p>The required information may include a vehicle registration number, identification number, driving licence number, or challan reference.</p></details>
+      <details><summary>4. Can I check a traffic fine using my vehicle number?</summary><p>Some systems allow searches using a registration number, while others require additional information.</p></details>
+      <details><summary>5. How can I check an e-challan in Punjab, Pakistan?</summary><p>Use the official Punjab traffic or Safe City verification service and follow its current instructions. Payment services are also available through the official ePay Punjab platform.</p></details>
+      <details><summary>6. Is there an online e-challan service for Islamabad?</summary><p>Yes. Islamabad Capital Police lists E-Challan Verification among its official online public services.</p></details>
+      <details><summary>7. What is a PSID in traffic fine payment?</summary><p>A PSID is a payment reference used by supported government payment systems. It helps identify the relevant payment when settling an eligible challan.</p></details>
+      <details><summary>8. Can I pay a traffic fine through mobile banking?</summary><p>In areas where the traffic authority supports it, payment may be available through mobile banking or other authorized digital payment channels.</p></details>
+      <details><summary>9. What happens if I do not pay a traffic fine?</summary><p>Consequences depend on local law and the issuing authority. They may include additional proceedings, restrictions, or other enforcement measures.</p></details>
+      <details><summary>10. How can I confirm that my traffic fine has been paid?</summary><p>Keep your transaction receipt and check the official challan system for an updated payment status. If it remains unpaid, contact the payment provider or issuing authority.</p></details>
+      <details><summary>11. What should I do if the traffic fine belongs to another vehicle?</summary><p>Contact the issuing authority and submit the challan reference along with relevant vehicle registration or ownership documents.</p></details>
+      <details><summary>12. Can I challenge an incorrect traffic challan?</summary><p>Many jurisdictions provide a complaint or appeal process. Follow the instructions and deadlines issued by the relevant traffic authority.</p></details>
+      <details><summary>13. Why might my traffic fine not appear online?</summary><p>The record may not have been uploaded yet, the search information may be incorrect, or the ticket may be handled by another jurisdiction. Contact the issuing department if necessary.</p></details>
+      <details><summary>14. Are electronic traffic fines issued through cameras?</summary><p>In some locations, camera systems record specific violations and support the electronic issuance of traffic penalties.</p></details>
+      <details><summary>15. Can I receive a traffic fine without being stopped by an officer?</summary><p>Yes. Where electronic enforcement is authorized, a violation may be recorded by a camera and processed without a roadside stop.</p></details>
+      <details><summary>16. How can I avoid traffic fines?</summary><p>Follow speed limits, obey signals, wear required safety equipment, park legally, and keep your vehicle and driving documents valid.</p></details>
+      <details><summary>17. Is it safe to pay a traffic fine through a message link?</summary><p>Do not automatically trust payment links received through unexpected messages. Verify the fine independently through the official traffic authority and use an authorized payment channel.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- CLOSING BAND -->
+<section class="cta-band">
+  <div class="wrap">
+    <h2>Verify the details, keep your receipt, and drive with confidence.</h2>
+    <a class="btn" href="#top">Back to top</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <h3>Traffic Fine Guide</h3>
+        <p>Clear, practical information on checking, paying and disputing traffic penalties, so every driver stays informed and safe on the road.</p>
+      </div>
+      <div>
+        <h3>Quick links</h3>
+        <ul>
+          <li><a href="#what-is">What Is a Fine Check?</a></li>
+          <li><a href="#how-to-check">Checking Fines Online</a></li>
+          <li><a href="#pakistan">Fine Check in Pakistan</a></li>
+          <li><a href="#payment">Paying a Fine</a></li>
+          <li><a href="#faqs">FAQs</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Follow us</h3>
+        <div class="social">
+          <a href="https://facebook.com/" aria-label="Facebook" rel="noopener"><svg viewBox="0 0 24 24"><path d="M13.5 22v-8.2h2.8l.5-3.3h-3.3V8.4c0-.9.4-1.7 1.8-1.7h1.6V3.8c-.3 0-1.3-.2-2.4-.2-2.5 0-4.1 1.5-4.1 4.2v2.7H7.6v3.3h2.8V22h3.1Z"/></svg></a>
+          <a href="https://x.com/" aria-label="X (Twitter)" rel="noopener"><svg viewBox="0 0 24 24"><path d="M17.8 3h3.1l-6.8 7.7L22 21h-6.2l-4.9-6.3L5.3 21H2.2l7.2-8.3L1.8 3h6.3l4.4 5.8L17.8 3Zm-1.1 16.2h1.7L7.2 4.7H5.4l11.3 14.5Z"/></svg></a>
+          <a href="https://instagram.com/" aria-label="Instagram" rel="noopener"><svg viewBox="0 0 24 24"><path d="M7.5 2h9A5.5 5.5 0 0 1 22 7.5v9a5.5 5.5 0 0 1-5.5 5.5h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2Zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm5.3-3.3a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4Z"/></svg></a>
+          <a href="https://youtube.com/" aria-label="YouTube" rel="noopener"><svg viewBox="0 0 24 24"><path d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.5 2.5 0 0 0 2.4 7.2C2 8.8 2 12 2 12s0 3.2.4 4.8a2.5 2.5 0 0 0 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8c.4-1.6.4-4.8.4-4.8s0-3.2-.4-4.8ZM10 15V9l5.2 3L10 15Z"/></svg></a>
+          <a href="https://linkedin.com/" aria-label="LinkedIn" rel="noopener"><svg viewBox="0 0 24 24"><path d="M4.9 3.5a2.1 2.1 0 1 1 0 4.2 2.1 2.1 0 0 1 0-4.2ZM3 9h3.8v12H3V9Zm6.2 0h3.6v1.7h.1c.5-.9 1.7-2 3.6-2 3.8 0 4.5 2.5 4.5 5.8V21h-3.8v-5.6c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9V21H9.2V9Z"/></svg></a>
+        </div>
+      </div>
+    </div>
+    <div class="copy">&copy; 2026 Traffic Fine Guide. All rights reserved. Always verify fines through the official traffic authority.</div>
+  </div>
+</footer>
+
+</body>
+</html>
